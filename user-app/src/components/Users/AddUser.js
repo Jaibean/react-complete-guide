@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import classes from "./AddUser.module.css";
-import ErrorModule from "../UI/ErrorModal";
+import ErrorModal from "../UI/ErrorModal";
 
 const AddUser = (props) => {
   const [enteredUserName, setEnteredUserName] = useState("");
@@ -45,7 +45,7 @@ const AddUser = (props) => {
 
   return (
       <div>
-     {error && <ErrorModule title={error.title} message={error.message} onConfirm={errorHandler} /> }
+     {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} /> }
     <Card className={classes.input}>
       <form onSubmit={addUserHandler}>
         <label htmlFor="username">Username</label>
