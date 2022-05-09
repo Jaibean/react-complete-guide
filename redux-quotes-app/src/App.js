@@ -8,8 +8,10 @@ import Layout from "./components/layout/Layout";
 import NotFound from "./pages/NotFound";
 import LoadingSpinner from "./components/UI/LoadingSpinner";
 
+// Lazy Loading to split code and make initial loading faster
 const NewQuote = React.lazy(() => import("./pages/NewQuote"));
 
+// Added suspense to display fallback loading spinner while components are being loaded
 function App() {
   return (
     <Layout>
